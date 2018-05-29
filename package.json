@@ -1,0 +1,26 @@
+{
+  "name": "xlsxjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "eslint": "^4.19.1",
+    "express": "~4.16.0",
+    "filewatcher": "^3.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "parse-error": "^0.2.0",
+    "pug": "2.0.0-beta11",
+    "pify": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "xlsx": "^0.12.11",
+    "xlsx-to-json-lc": "^0.5.0"
+  }
+}
