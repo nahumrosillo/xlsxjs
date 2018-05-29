@@ -4,7 +4,7 @@ Parser and writer for various spreadsheet formats such as XLSX, HTM and MHTML. E
 
 # Installation
 
-With NPM in your terminal:
+In your terminal:
 
 ```javascript
 $ npm install 
