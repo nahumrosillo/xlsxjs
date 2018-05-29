@@ -13,11 +13,7 @@ $ npm install
 Import all functions you need
 
 ```javascript
-// Dependencies
-var XLSX = require('xlsx');
-const pify = require('pify');
 
-//  Functions
 const getColumn = require('../services/gets').getColumn;
 const getRow = require('../services/gets').getRow;
 const getFirstRow = require('../public/javascripts/utils').getFirstRow;
