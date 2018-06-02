@@ -5,7 +5,12 @@ const pify = require('pify');
 const getColumn = require('../../services/gets').getColumn;
 const getRow = require('../../services/gets').getRow;
 
-
+/**
+ *
+ * @param nameExcel
+ * @param nameSheet
+ * @returns {any}
+ */
 const getFirstRow = function(nameExcel, nameSheet) {
     var file = XLSX.readFile(nameExcel);
     var page1 = XLSX.utils.sheet_to_json(file.Sheets[file.SheetNames[nameSheet]], {header:1, raw:true});
@@ -13,8 +18,15 @@ const getFirstRow = function(nameExcel, nameSheet) {
 };
 module.exports.getFirstRow = getFirstRow;
 
+/**
+ *
+ * @param excel_path
+ * @param sheet
+ * @param column
+ * @returns {Promise<*>}
+ */
 async function getData(excel_path, sheet, column) {
-    //Crea una promesa en la variable miPromesa
+
     const promisingGetColumn = pify(getColumn); //Crea una promesa y controla el callback.
 
     var miPromesa = promisingGetColumn(excel_path, sheet, column);
@@ -26,11 +38,22 @@ async function getData(excel_path, sheet, column) {
         return myColumn.column;
 }
 
+/**
+ *
+ * @param container
+ * @param row
+ */
 const addRow = function(container, row) {
     container.push(row);
 }
 module.exports.addRow = addRow;
 
+/**
+ *
+ * @param container
+ * @param header
+ * @param column
+ */
 const addColumn = function(container, header, column) {
 
     if (container.length == 0) {

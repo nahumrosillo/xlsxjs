@@ -1,6 +1,6 @@
 pe = require('parse-error');
 
-//	Create a promise
+//	Allow create async function
 promising = function(promise, error) {
     return promise
         .then(data => {
@@ -10,10 +10,10 @@ promising = function(promise, error) {
         );
 };
 
-PrintAndThrowException = function(err_message, log){ // TE stands for Throw Error
+//  Debug function
+PrintAndThrowException = function(err_message, log){
     if(log === true){
         console.error(err_message);
     }
-
     throw new Error(err_message);
 };
